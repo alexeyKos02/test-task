@@ -1,0 +1,16 @@
+#root {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  justify-content: center;
+}
+button {
+  border: 1px solid black;
+  border-radius: 4px;
+}
+* {
+  font-size: 20px;
+}
+input {
+  padding: 0.5vw;
+}

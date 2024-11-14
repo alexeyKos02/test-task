@@ -1,0 +1,38 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #fed9ff;
+  &__filters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1.5px solid black;
+    border-radius: 4px;
+    button {
+      padding: 0.5vw;
+      border-radius: 0;
+      border-left: none;
+      border-right: 1px solid black;
+      border-top: none;
+      border-bottom: none;
+      background: none;
+      color: #fed9ff;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  &__controls {
+    button {
+      padding: 0.5vw;
+      background: none;
+      color: #fed9ff;
+      border: 1.5px solid black;
+    }
+  }
+}
+.menu * {
+   font-size: 15px;
+}

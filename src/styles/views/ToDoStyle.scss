@@ -1,0 +1,18 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    width: 40vw;
+    height: 50vh;
+    margin-top: 10vh;
+    background: blueviolet;
+    padding: 3vw 3vw 5vw 3vw;
+    border-radius: 4px;
+    &__menu {
+        position: absolute;
+        bottom: 1vw;
+        left: 1vw;
+        right: 1vw;
+    }
+}

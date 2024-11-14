@@ -1,0 +1,75 @@
+@charset "UTF-8";
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid black;
+  padding: 1vw 1vw;
+  box-sizing: border-box;
+  /* Анимация появления галочки */
+}
+.task__left {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+.task__delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+}
+.task__delete-button img {
+  width: 1.5vw;
+  height: 1.5vw;
+}
+.task__checkbox-container {
+  display: flex;
+  align-items: center;
+}
+.task .checkbox-input {
+  display: none; /* Скрываем стандартный чекбокс */
+}
+.task .checkbox-label {
+  width: 24px;
+  height: 24px;
+  background-color: #f0f0f0;
+  border-radius: 50%; /* Делаем круглый фон */
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.task .checkbox-input:checked + .checkbox-label {
+  background-color: #4caf50; /* Меняем цвет фона при активации */
+}
+.task .checkbox-input:checked + .checkbox-label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  width: 6px;
+  height: 10px;
+  border-radius: 2px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+.task .checkbox-label::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+}
+
+.sub-tasks {
+  position: relative;
+  margin: 0 1vw 1vw;
+  width: 90%;
+}
+
+/*# sourceMappingURL=TaskStyle.css.map */

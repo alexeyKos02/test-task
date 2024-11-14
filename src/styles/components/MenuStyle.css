@@ -1,0 +1,39 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #fed9ff;
+}
+.menu__filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1.5px solid black;
+  border-radius: 4px;
+}
+.menu__filters button {
+  padding: 0.5vw;
+  border-radius: 0;
+  border-left: none;
+  border-right: 1px solid black;
+  border-top: none;
+  border-bottom: none;
+  background: none;
+  color: #fed9ff;
+}
+.menu__filters button:last-child {
+  border-right: none;
+}
+.menu__controls button {
+  padding: 0.5vw;
+  background: none;
+  color: #fed9ff;
+  border: 1.5px solid black;
+}
+
+.menu * {
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=MenuStyle.css.map */

@@ -1,0 +1,21 @@
+.tasks-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  width: 100%;
+  height: auto;
+  align-items: end;
+  border: 1.5px solid black;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.tasks-wrapper > .task:first-child {
+  border-top: 0;
+}
+.tasks-wrapper::-webkit-scrollbar {
+  display: none; /* Скрывает полосу прокрутки */
+}
+.tasks-wrapper {
+  scrollbar-width: none; /* Скрывает полосу прокрутки в Firefox, сохраняя возможность прокрутки */
+}
