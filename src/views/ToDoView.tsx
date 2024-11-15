@@ -7,6 +7,7 @@ import MenuComponent from "../components/MenuComponent.tsx";
 import {Filters, Task} from "../types";
 import {useEffect, useState} from "react";
 import {deleteAllDoneTasks, loadTasks} from "../store/reducers/TasksSlice.ts";
+import {successNotify} from "../utils/notifications";
 
 const ToDoView = () => {
     const tasks = useAppSelector((state) => state.tasks.value);
@@ -21,6 +22,7 @@ const ToDoView = () => {
 
     function deleteAllAppDoneTask() {
         dispatch(deleteAllDoneTasks())
+        successNotify("Все завершенные задачи удалены");
     }
 
     useEffect(() => {

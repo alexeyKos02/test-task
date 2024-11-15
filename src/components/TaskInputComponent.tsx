@@ -33,6 +33,7 @@ const TaskInputComponent = () => {
             });
             formRef.current?.reset();
         }
+        successNotify('Подзадача добавлена');
     }
 
     function deleteSubTask(id: number) {

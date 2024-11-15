@@ -108,6 +108,8 @@ describe('TaskInputComponent', () => {
         fireEvent.click(addButton);
 
         expect(screen.getByTestId('tasks-component')).toBeInTheDocument();
+
+        expect(successNotify).toHaveBeenCalledWith('Подзадача добавлена');
     });
 
     it('Позволяет сохранять задачу с подзадачами', () => {

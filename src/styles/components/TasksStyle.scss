@@ -6,16 +6,20 @@
   width: 100%;
   height: auto;
   align-items: end;
-  border: 1.5px solid black;
-  border-radius: 8px;
   box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 .tasks-wrapper > .task:first-child {
   border-top: 0;
 }
 .tasks-wrapper::-webkit-scrollbar {
-  display: none; /* Скрывает полосу прокрутки */
+  display: none;
 }
 .tasks-wrapper {
-  scrollbar-width: none; /* Скрывает полосу прокрутки в Firefox, сохраняя возможность прокрутки */
+  scrollbar-width: none;
 }

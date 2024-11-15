@@ -6,6 +6,7 @@ import TasksComponent from "./TasksComponent";
 import { useAppDispatch } from "../hooks/redux";
 import { deleteSubTask, doneSubTask, doneTask } from "../store/reducers/TasksSlice";
 import { deleteTask } from "../store/reducers/TasksSlice";
+import {successNotify} from "../utils/notifications";
 
 
 interface TasksComponentProps extends React.HTMLProps<HTMLDivElement> {
@@ -38,12 +39,14 @@ const TaskComponent = ({task, mainTaskId, deleteFunction, checkFunction, ...prop
     function deleteActualTask() {
         if (deleteFunction) {
             deleteFunction(task.id);
+            successNotify('Подзадача удалена');
         } else {
             if (mainTaskId) {
-                dispatch(deleteSubTask({taskId: mainTaskId, subTaskId: task.id}))
+                dispatch(deleteSubTask({taskId: mainTaskId, subTaskId: task.id}));
             } else {
-                dispatch(deleteTask(task.id))
+                dispatch(deleteTask(task.id));
             }
+            successNotify('Задача удалена');
         }
     }
 
